@@ -7,6 +7,7 @@ using Android.Support.Design.Widget;
 
 namespace CubeXNative.Droid
 {
+    // This is test
     [Activity(Label = "AddItemActivity")]
     public class AddItemActivity : Activity
     {
