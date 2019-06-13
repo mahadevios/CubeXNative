@@ -12,6 +12,7 @@ namespace CubeXNative.iOS
     {
         // class-level declarations
 
+
         public override UIWindow Window
         {
             get;
