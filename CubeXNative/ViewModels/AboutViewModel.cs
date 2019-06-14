@@ -10,6 +10,7 @@ namespace CubeXNative
             Title = "About";
 
             OpenWebCommand = new Command(() => Plugin.Share.CrossShare.Current.OpenBrowser("https://xamarin.com/platform"));
+            
 
             this.setDbValues();
         }
