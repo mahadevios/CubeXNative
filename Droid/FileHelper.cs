@@ -10,14 +10,13 @@ namespace CubeXNative.Droid
         public string GetLocalFilePath(string filename)
         {
             string docFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            string libFolder = Path.Combine(docFolder, "..", "Documents", "Databases");
 
-            if (!Directory.Exists(libFolder))
+            if (!Directory.Exists(docFolder))
             {
-                Directory.CreateDirectory(libFolder);
+                Directory.CreateDirectory(docFolder);
             }
 
-            return Path.Combine(libFolder, filename);
+            return Path.Combine(docFolder, filename);
         }
     }
 }
