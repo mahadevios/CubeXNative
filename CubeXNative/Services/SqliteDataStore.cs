@@ -18,7 +18,6 @@ namespace CubeXNative
             dataBase = new SQLiteAsyncConnection(dbPath);
             TableCreateIfExists<User>();
 
-
             //TableCreateIfExists<DbSavedJobs>();
             //TableCreateIfExists<DbAppliedJobs>();
             //TableCreateIfExists<DbMassNotification>();

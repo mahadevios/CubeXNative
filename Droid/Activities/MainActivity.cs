@@ -76,6 +76,7 @@ namespace CubeXNative.Droid
             {
                 case 0: return BrowseFragment.NewInstance();
                 case 1: return AboutFragment.NewInstance();
+                case 2: return VerticalsFragment.NewInstance();
             }
             return null;
         }
