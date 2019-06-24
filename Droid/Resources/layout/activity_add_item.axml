@@ -6,11 +6,33 @@
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
     <android.support.v4.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        <LinearLayout style="@style/Widget.CardContent" android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/title" android:textAppearance="@style/TextAppearance.AppCompat.Title" />
-            <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/txtTitle" />
-            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/description" android:textAppearance="@style/TextAppearance.AppCompat.Title" />
-            <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/txtDesc" />
+        <LinearLayout
+            style="@style/Widget.CardContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtTitle" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtDesc" />
+            <Button
+                android:text="Save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button1" />
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
     <android.support.design.widget.FloatingActionButton android:id="@+id/save_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_save" app:elevation="4dp" android:layout_gravity="bottom|right" android:layout_margin="@dimen/fab_margin" />

@@ -15,7 +15,7 @@ namespace CubeXNative.Droid
         EditText title, description;
 
         public ItemsViewModel ViewModel { get; set; }
-
+         
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
