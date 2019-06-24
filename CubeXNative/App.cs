@@ -9,8 +9,9 @@ namespace CubeXNative
     public class App
     {
         public static bool UseMockDataStore = true;
-        public static string BackendUrl = "http://localhost:5000";
-        public static SqliteDataStore database;
+        //public static string BackendUrl = "http://localhost:5000";
+        public static string BackendUrl = "https://investhr.biz/investhr";
+        public static SqliteDataStore database;   // for internal class use
         public static IContainer Container { get; set; }
         public static ContainerBuilder builder;
         public static void Initialize()
@@ -23,6 +24,9 @@ namespace CubeXNative
             builder = new ContainerBuilder();
 
             builder.RegisterInstance(new CloudDataStore()).As<IDataStore<Item>>();
+
+            builder.RegisterInstance(new ApiStore()).As<IApiStore>();
+
 
         }
 
@@ -53,9 +57,7 @@ namespace CubeXNative
                         String localFilePath = fileHelper.GetLocalFilePath("CubeXNative.db3");
 
                         database = new SqliteDataStore(localFilePath);
-
-                        Console.WriteLine("new line");
-
+                        
                     }
 
                     return database;

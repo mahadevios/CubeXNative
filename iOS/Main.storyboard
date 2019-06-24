@@ -102,6 +102,7 @@
                     <connections>
                         <segue destination="IVu-6x-Ha6" kind="relationship" relationship="viewControllers" id="1947"/>
                         <segue destination="uSp-bD-Qry" kind="relationship" relationship="viewControllers" id="2021"/>
+                        <segue id="4044" destination="3883" kind="relationship" relationship="viewControllers"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -339,6 +340,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2250" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2906" y="-1534"/>
+        </scene>
+        <scene sceneID="3882">
+            <objects>
+                <navigationController id="3883" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3885">
+                        <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue id="3964" destination="3892" kind="relationship" relationship="rootViewController"/>
+                    </connections>
+                    <tabBarItem key="tabBarItem" title="Item" id="4043"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3886" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-315" y="781"/>
+        </scene>
+        <scene sceneID="3891">
+            <objects>
+                <viewController id="3892" sceneMemberID="viewController" customClass="SampleViewController" storyboardIdentifier="SampleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3889"/>
+                        <viewControllerLayoutGuide type="bottom" id="3890"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3893">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3966" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="70" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3967" reuseIdentifier="cell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3967" id="3968">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="3970" firstAttribute="centerX" secondItem="3966" secondAttribute="centerX"/>
+                            <constraint id="3971" firstItem="3966" firstAttribute="height" secondItem="3893" secondAttribute="height"/>
+                            <constraint id="3972" firstItem="3966" firstAttribute="width" secondItem="3893" secondAttribute="width"/>
+                            <constraint id="3973" firstItem="3889" firstAttribute="bottom" secondItem="3966" secondAttribute="top"/>
+                        </constraints>
+                    </view>
+                    <navigationItem title="Title" id="3963" key="navigationItem"/>
+                    <connections>
+                        <outlet property="tableView" destination="3966" id="name-outlet-3966"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3894" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234" y="765"/>
         </scene>
     </scenes>
     <resources>
