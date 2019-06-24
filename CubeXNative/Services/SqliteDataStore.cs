@@ -51,7 +51,7 @@ namespace CubeXNative
         {
             try
             {
-                if (!string.IsNullOrEmpty(user.Name))
+                if (!string.IsNullOrEmpty(user.name))
                 {
                     return dataBase.InsertAsync(user);
                 }

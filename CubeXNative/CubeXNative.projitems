@@ -24,5 +24,14 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\SqliteDataStore.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IFileHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ApiStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IApiStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Login.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\BaseDataObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ObservableObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ObservableRangeCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SampleViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SampleModel.cs" />
   </ItemGroup>
 </Project>

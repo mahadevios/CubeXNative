@@ -4,8 +4,14 @@ namespace CubeXNative
 {
     public class User
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Role { get; set; }
+        public string id { get; set; }
+        public string name { get; set; }
+        public string role { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
+        public string deviceToken { get; set; }
+        public string itemName { get; set; }
+
+
     }
 }

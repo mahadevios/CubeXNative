@@ -28,9 +28,10 @@ namespace CubeXNative.iOS
             //builder.RegisterInstance(new SqliteDataStore()).As<ISqliteDataStore>();
             App.builder.RegisterInstance(new FileHelper()).As<IFileHelper>(); // register FileHelper as IFileHelper and resolve the instance in respective platform as IFileHelper
 
-            App.builder.RegisterInstance(new FileHelper()).As<IFileHelper>().SingleInstance();
+            //App.builder.RegisterInstance(new FileHelper()).As<IFileHelper>().SingleInstance();
             //builder.RegisterInstance(new AppleSettings()).As<ISettings>();
             //builder.RegisterType<MainViewModel>();
+            
 
             App.Container = App.builder.Build();
 
