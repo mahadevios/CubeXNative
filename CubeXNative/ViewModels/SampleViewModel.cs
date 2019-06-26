@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Autofac;
 using CubeXNative.Services;
+using Acr.UserDialogs;
 
 namespace CubeXNative
 { 
@@ -25,7 +26,11 @@ namespace CubeXNative
 
             IsBusy = true;
 
+            UserDialogs.Instance.ShowLoading("Loading..", MaskType.Black);
+
             var _items = await getVertcalList();
+
+            UserDialogs.Instance.HideLoading();
 
             verticalItemLists.ReplaceRange(_items.itemVerticals);
 
