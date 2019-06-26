@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Android.Support.V4.Widget;
 using Android.Support.V7.Widget;
+using System.Threading;
+using Android.Graphics.Drawables;
 
 namespace CubeXNative.Droid
 {
@@ -41,6 +37,18 @@ namespace CubeXNative.Droid
             var recyclerView =
                 view.FindViewById<RecyclerView>(Resource.Id.recyclerView);
 
+            /*Dialog _ProgressDialog = new Dialog(Context);
+            var dialog = new ProgressBar(Context);
+
+            dialog.Indeterminate = true;
+            dialog.Visibility = ViewStates.Visible;
+
+            _ProgressDialog.Window.SetBackgroundDrawable(new ColorDrawable(Android.Graphics.Color.Transparent));
+            _ProgressDialog.SetTitle("Please wait...");
+            _ProgressDialog.SetCancelable(false);
+            _ProgressDialog.SetContentView(dialog);
+            _ProgressDialog.Show();*/
+
             recyclerView.HasFixedSize = true;
             recyclerView.SetAdapter(adapter = new VerticalsItemsAdapter(Activity, ViewModel));
 
@@ -50,7 +58,14 @@ namespace CubeXNative.Droid
             progress = view.FindViewById<ProgressBar>(Resource.Id.progressbar_loading);
             progress.Visibility = ViewStates.Gone;
 
+            /*_ProgressDialog.Dismiss();*/
+
             return view;
+        }
+
+        private void RunOnUiThread(Func<object> p)
+        {
+            throw new NotImplementedException();
         }
 
         public override void OnStart()
