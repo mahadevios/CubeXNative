@@ -19,6 +19,7 @@ namespace CubeXNative.iOS
         public SampleViewModel ViewModel { get; set; }
         public override void ViewDidLoad()
         {
+            
             base.ViewDidLoad();
             ViewModel = new SampleViewModel();
             ViewModel.PropertyChanged += ViewModel_PropertyChanged;
@@ -31,8 +32,11 @@ namespace CubeXNative.iOS
         {
             base.ViewDidAppear(animated);
 
+            //UserDialogs.Instance.ShowLoading("Loading..", MaskType.Black);
             if (ViewModel.verticalItemLists.Count == 0)
                 ViewModel.loadVerticalItemsCommand.Execute(null);
+
+            //UserDialogs.Instance.HideLoading();
         }
 
 
