@@ -5,6 +5,7 @@ namespace CubeXNative.iOS
 {
     public partial class AboutViewController : UIViewController
     {
+        // comment
         public AboutViewModel ViewModel { get; set; }
         public AboutViewController(IntPtr handle) : base(handle)
         {
