@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -37,6 +37,27 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Acr.UserDialogs, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Acr.UserDialogs.7.0.4\lib\monoandroid81\Acr.UserDialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="AndHUD, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AndHUD.1.4.1\lib\MonoAndroid81\AndHUD.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_green, Version=1.1.14.520, Culture=neutral, PublicKeyToken=a84b7dcfb1391f7f, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.14\lib\MonoAndroid\SQLitePCLRaw.batteries_green.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2, Version=1.1.14.520, Culture=neutral, PublicKeyToken=8226ea5df37bcae9, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.14\lib\MonoAndroid\SQLitePCLRaw.batteries_v2.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core, Version=1.1.14.520, Culture=neutral, PublicKeyToken=1488e028ca7ab535, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.core.1.1.14\lib\MonoAndroid\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.lib.e_sqlite3, Version=1.1.14.520, Culture=neutral, PublicKeyToken=e4ad490600e2234c, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.lib.e_sqlite3.android.1.1.14\lib\MonoAndroid\SQLitePCLRaw.lib.e_sqlite3.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.e_sqlite3, Version=1.1.14.520, Culture=neutral, PublicKeyToken=9c301db686d0bd12, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.provider.e_sqlite3.android.1.1.14\lib\MonoAndroid\SQLitePCLRaw.provider.e_sqlite3.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
@@ -115,21 +136,6 @@
       <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.28.0.0.1\lib\monoandroid81\Xamarin.Android.Support.v7.CardView.dll</HintPath>
     </Reference>
     <Reference Include="Java.Interop" />
-    <Reference Include="SQLitePCLRaw.core">
-      <HintPath>..\packages\SQLitePCLRaw.core.1.1.11\lib\MonoAndroid\SQLitePCLRaw.core.dll</HintPath>
-    </Reference>
-    <Reference Include="SQLitePCLRaw.lib.e_sqlite3">
-      <HintPath>..\packages\SQLitePCLRaw.lib.e_sqlite3.android.1.1.11\lib\MonoAndroid\SQLitePCLRaw.lib.e_sqlite3.dll</HintPath>
-    </Reference>
-    <Reference Include="SQLitePCLRaw.provider.e_sqlite3">
-      <HintPath>..\packages\SQLitePCLRaw.provider.e_sqlite3.android.1.1.11\lib\MonoAndroid\SQLitePCLRaw.provider.e_sqlite3.dll</HintPath>
-    </Reference>
-    <Reference Include="SQLitePCLRaw.batteries_green">
-      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.11\lib\MonoAndroid\SQLitePCLRaw.batteries_green.dll</HintPath>
-    </Reference>
-    <Reference Include="SQLitePCLRaw.batteries_v2">
-      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.11\lib\MonoAndroid\SQLitePCLRaw.batteries_v2.dll</HintPath>
-    </Reference>
     <Reference Include="SQLite-net">
       <HintPath>..\packages\sqlite-net-pcl.1.5.231\lib\netstandard1.1\SQLite-net.dll</HintPath>
     </Reference>
@@ -138,6 +144,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fragments\VerticalsFragment.cs" />
     <Compile Include="MainApplication.cs" />
     <Compile Include="Activities\AddItemActivity.cs" />
     <Compile Include="Activities\BaseActivity.cs" />
@@ -154,6 +161,7 @@
     <Compile Include="FileHelper.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Resources\AboutResources.txt" />
@@ -193,6 +201,12 @@
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\values-v19\styles.xml" />
     <AndroidResource Include="Resources\values-v21\styles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\item_vertical.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="..\CubeXNative\CubeXNative.projitems" Label="Shared" Condition="Exists('..\CubeXNative\CubeXNative.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

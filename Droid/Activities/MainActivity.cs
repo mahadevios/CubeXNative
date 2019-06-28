@@ -7,6 +7,7 @@ using Android.Widget;
 using Android.Support.V4.App;
 using Android.Support.V4.View;
 using Android.Support.Design.Widget;
+using Acr.UserDialogs;
 
 namespace CubeXNative.Droid
 {
@@ -31,6 +32,8 @@ namespace CubeXNative.Droid
             pager.Adapter = adapter;
             tabs.SetupWithViewPager(pager);
             pager.OffscreenPageLimit = 3;
+
+            UserDialogs.Init(this);
 
             pager.PageSelected += (sender, args) =>
             {
@@ -76,6 +79,7 @@ namespace CubeXNative.Droid
             {
                 case 0: return BrowseFragment.NewInstance();
                 case 1: return AboutFragment.NewInstance();
+                case 2: return VerticalsFragment.NewInstance();
             }
             return null;
         }

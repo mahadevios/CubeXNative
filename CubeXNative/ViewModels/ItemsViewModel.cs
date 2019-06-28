@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using CubeXNative.Services;
 using CubeXNative.Helpers;
-using System.Collections.Generic;
 
 using Autofac;
 
