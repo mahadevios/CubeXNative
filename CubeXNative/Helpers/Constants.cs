@@ -14,7 +14,7 @@ namespace CubeXNative.Helpers
 
         public static string mobileItemList = "login/mobileItemList";
 
-
+        //comment
         //public static string mobileVerticalJob = "mobileVerticalJob";
         //public static string mobileHorizontalJob = "mobileHorizontalJob";
         //public static string mobileLocationJob = "mobileLocationWiseJob";
